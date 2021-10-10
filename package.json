@@ -1,0 +1,62 @@
+{
+  "name": "log-tools",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "nw-react-scripts": "3.4.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "scripts": {
+    "start": "yarn run watch:css && nw-react-scripts start",
+    "build": "yarn run build:css && nw-react-scripts build",
+    "test": "nw-react-scripts test",
+    "eject": "nw-react-scripts eject",
+    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+  },
+  "eslintConfig": {
+    "extends": "nw-react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "main": "index.html",
+  "window": {
+    "position": "center",
+    "icon": "logo192.png"
+  },
+  "nwBuilder": {
+    "//": "https://github.com/nwjs-community/nw-builder",
+    "winIco": "./src/assets/favicon0.ico",
+    "platforms": [
+      "win32",
+      "win64"
+    ],
+    "version": "latest",
+    "flavor": "normal",
+    "buildDir": "./build",
+    "cacheDir": "./cache"
+  },
+  "devDependencies": {
+    "@material-ui/core": "^4.11.2",
+    "autoprefixer": "9",
+    "highland": "^2.13.5",
+    "postcss-cli": "7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "yarn-audit-fix": "^3.2.13"
+  }
+}
